@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane styleClass="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+    <top>
+        <HBox fx:id="mb" />
+    </top>
+    <left>
+        <VBox >
+            <children>
+                <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
+                <Button fx:id="calculer" styleClass="command_button" defaultButton="true"  text="Calculer     ">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/calculer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/effacer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/enregistrer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="command_button" text="Imprimer   ">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/imprimer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <HBox minWidth="400" prefHeight="100.0">
+            <children>
+                <Separator prefWidth="10" orientation="HORIZONTAL" visible="false"/>
+                <VBox prefWidth="300.0" >
+                    <children>
+                        <Label styleClass="titre20" text="Calcul du glissement :" underline="true" />
+                        <Label styleClass="titre18" text="Condition du calcul:"/>
+                        <RadioButton fx:id="radio1" text="condition drainée" />
+                        <RadioButton fx:id="radio2" text="condition non drainée" />
+                        <Separator orientation="VERTICAL" visible="false" />
+                        <Separator maxWidth="250.0"/>
+                        <Separator orientation="VERTICAL" visible="false" />
+                        <Label styleClass="titre18" text="Données:"/>
+                        <GridPane fx:id="donnees" maxWidth="200">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES"  />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" />
+                                <ColumnConstraints />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label styleClass="symbole" text="B" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                <Label styleClass="symbole" text="φ3k" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                <Label styleClass="symbole" text="C3k" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                                <Label styleClass="symbole" text="Cu1" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                                <Label styleClass="symbole" text="γ" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                                <Label styleClass="symbole" text="γrh" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                                <Label styleClass="symbole" text="H" GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+
+                                <TextField  GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <TextField  GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField  GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField  GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <TextField  GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <TextField  GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <TextField  GridPane.columnIndex="1" GridPane.rowIndex="6" />
+
+                                <Label text="m" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                                <Label text="°" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                <Label text="kpa" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                <Label text="kpa" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                <Label text="kn/m³" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                <Label text="m" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+                            </children>
+                        </GridPane>
+                    </children>
+                </VBox>
+                <Separator orientation="HORIZONTAL" prefWidth="100"/>
+                <VBox prefWidth="300">
+                    <children>
+                        <Label styleClass="titre20" text="Resultat:"/>
+                        <GridPane fx:id="resultats" >
+                            <columnConstraints>
+                                <ColumnConstraints />
+                                <ColumnConstraints />
+                                <ColumnConstraints />
+                            </columnConstraints>
+                            <children>
+                                <Label styleClass="symbole"  text="Rd" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                                <Label styleClass="symbole"  text="Vk" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                                <Label styleClass="symbole"  text="Fs " GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+
+                                <TextField  maxWidth="70" GridPane.columnIndex="1" GridPane.rowIndex="0" editable="false"/>
+                                <TextField  maxWidth="70" GridPane.columnIndex="1" GridPane.rowIndex="1" editable="false"/>
+                                <TextField  maxWidth="70" GridPane.columnIndex="1" GridPane.rowIndex="2" editable="false"/>
+
+                                <Label text="kn/m" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                                <Label text="kn/m" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                                <Label styleClass="titre20"  text="" textFill="#a1170e" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                            </children>
+                        </GridPane>
+
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+    <right>
+        <VBox minWidth="400.0">
+            <children>
+                <ImageView fitHeight="270.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../images/glissement.png" /></image>
+                </ImageView>
+                <TextArea fx:id="info" editable="false" minHeight="100">hcosuhcd</TextArea>
+            </children>
+        </VBox>
+    </right>
+
+    <bottom>
+        <VBox>
+            <children>
+                <ImageView fx:id="formdr_img" fitWidth="300.0">
+                    <image><Image url="@../images/drainnée.png" /></image>
+                </ImageView>
+                <ImageView fx:id="formnondr_img" fitHeight="45" fitWidth="90.0">
+                    <image><Image url="@../images/nondr.png" /></image>
+                </ImageView>
+                <ImageView fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@../images/condition.png" /></image>
+                </ImageView>
+            </children>
+        </VBox>
+    </bottom>
+
+</BorderPane>

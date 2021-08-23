@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml">
+    <top>
+        <HBox fx:id="mb"/>
+    </top>
+    <left >
+        <VBox >
+            <children>
+                <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
+                <Button fx:id="calculer" styleClass="command_button" defaultButton="true"  text="Calculer     ">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/calculer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+
+                <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/effacer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/enregistrer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button styleClass="command_button" text="Imprimer   ">
+                    <font><Font size="15.0" /></font>
+                    <graphic >
+                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
+                            <image >
+                                <Image url="/images/icones/imprimer.png"/>
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </children>
+        </VBox>
+    </left>
+    <center>
+        <HBox >
+            <children>
+                <Separator prefWidth="10" orientation="HORIZONTAL" visible="false"/>
+                <VBox minWidth="400">
+                    <children>
+                        <Label styleClass="titre20" text="DONNÉES :"/>
+                        <HBox>
+                            <children>
+                                <Label text="Vk"/>
+                                <TextField disable="true" fx:id="vk" editable="false" maxWidth="80"/>
+                            </children>
+                        </HBox>
+                        <HBox>
+                            <children>
+                                <Label text="Pa"/>
+                                <TextField disable="true" fx:id="pa" editable="false" maxWidth="80"/>
+                            </children>
+                        </HBox>
+                        <Label styleClass="titre" text="Formules"/>
+                        <ImageView preserveRatio="true">
+                            <image><Image url="@/images/form_renversemment.png" /></image>
+                        </ImageView>
+                    </children>
+                </VBox>
+                <VBox>
+                    <children>
+                        <Label text="RESULTATS :" underline="true">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <HBox>
+                            <Label text="Fs=" />
+                            <TextField fx:id="fs" editable="false" maxWidth="80"/>
+                            <Label fx:id="res" text="" textFill="#a1170e">
+                                <font>
+                                    <Font name="System Bold" size="18.0" />
+                                </font>
+                            </Label>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
+
+    <right>
+        <VBox minWidth="450.0">
+            <children>
+
+                <ImageView fitHeight="300.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                    <image><Image url="@/images/renversement.png" /></image>
+                </ImageView>
+                <TextArea fx:id="info" editable="false">hcosuhcd</TextArea>
+
+            </children>
+        </VBox>
+    </right>
+
+</BorderPane>
+

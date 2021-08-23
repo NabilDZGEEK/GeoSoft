@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<HBox  prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<children>
+
+            <VBox>
+                <children>
+                    <Label styleClass="titre20" text="Calcul de la pressiomètre :" underline="true"/>
+                    <Label styleClass="titre18" text="Catégorie du sol:"/>
+                    <ComboBox fx:id="sol" prefWidth="150.0" promptText="choisir">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Argile et lémon" />
+                                <String fx:value="sables et graves" />
+                                <String fx:value="craies" />
+                                <String fx:value="Marnes et malmo calcaires,roches altérés" />
+                            </FXCollections>
+
+                        </items>
+                    </ComboBox>
+
+                    <Label styleClass="titre18" text="Type de fondation:"/>
+
+                    <ComboBox fx:id="fondation" prefWidth="150.0" promptText="choisir">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="carré" />
+                                <String fx:value="filante" />
+                                <String fx:value="rectangulaire" />
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                    <Label styleClass="titre18" text="Comportement du terrain"/>
+                    <RadioButton fx:id="radio1" text="Purement coherent (condition non drainée)" />
+                    <RadioButton fx:id="radio2" text="Purement frotant (condition drainée)" />
+                    <RadioButton fx:id="radio3" text="Intermédiare(coherent et frotant)" />
+
+                    <Label styleClass="titre18" text="Inclinaison de la charge"/>
+                    <ComboBox fx:id="inclin_charge" prefWidth="150.0" promptText="choisir">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="charge verticale" />
+                                <String fx:value="charge vers l'exterieur du talus" />
+                                <String fx:value="charge vers l'interieur du talus" />
+                            </FXCollections>
+
+                        </items>
+                    </ComboBox>
+                    <Separator orientation="VERTICAL" prefWidth="50.0" visible="false" />
+                    <Separator maxWidth="300.0"/>
+                    <Separator orientation="VERTICAL" prefWidth="50.0" visible="false" />
+                    <Label styleClass="titre18" text="Données:"/>
+                    <GridPane fx:id="données" maxWidth="200">
+                        <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="40.0" minWidth="10.0" prefWidth="50.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="70.0" prefWidth="50.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="50.0" minWidth="10.0" />
+                            <ColumnConstraints />
+                        </columnConstraints>
+                        <rowConstraints>
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="30.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        </rowConstraints>
+                        <children>
+
+                            <Label text="B" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="symbole"/>
+                            <Label text="L" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="symbole"/>
+                            <Label text="β" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="symbole"/>
+                            <Label text="d" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="symbole"/>
+                            <Label text="γ'1" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="symbole"/>
+
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                            <Label text="kn/m³" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                        </children>
+                    </GridPane>
+                </children>
+            </VBox>
+            <Separator visible="false" minWidth="10"/>
+            <VBox>
+                <children>
+                    <HBox>
+                        <Separator orientation="HORIZONTAL" prefWidth="60" visible="false"/>
+                        <Label styleClass="titre18" text="Tableau"/>
+                    </HBox>
+                    <GridPane fx:id="table" gridLinesVisible="true" maxWidth="200">
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="65"/>
+                            <ColumnConstraints minWidth="65"/>
+                            <ColumnConstraints minWidth="65"/>
+                        </columnConstraints>
+
+                        <children>
+                            <Label styleClass="symbole" text="Pli*" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="6" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="7" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="8" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="9" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="10" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="11" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="12" />
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="13" />
+
+                            <Label styleClass="symbole" text="Hi" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="9" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="13" />
+
+                            <Label styleClass="symbole" text="Pli*Hi" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="9" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                            <TextField editable="false" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+
+                        </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                    </GridPane>
+                    <GridPane  maxWidth="200">
+                        <columnConstraints>
+                            <ColumnConstraints minWidth="65"/>
+                            <ColumnConstraints minWidth="65"/>
+                            <ColumnConstraints minWidth="65"/>
+                        </columnConstraints>
+                        <children>
+                            <Label styleClass="symbole" text="Ple*" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <TextField fx:id="ple" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2"/>
+                        </children>
+                    </GridPane>
+                </children>
+            </VBox>
+
+
+</children>
+</HBox>

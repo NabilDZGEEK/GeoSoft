@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane minHeight="550" minWidth="1000" styleClass="home" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+        <top>
+            <HBox fx:id="mb" minWidth="500" prefWidth="500">
+                <children>
+                    <Button text="b1" /><Button text="bhcuierhfiuerf1" /><Button text="b1" />
+                </children>
+            </HBox>
+        </top>
+        <center>
+           <!-- <ImageView  fitHeight="550.0" fitWidth="1000.0" >
+                <image><Image url="@../images/acceuil.png" /></image>
+            </ImageView> !-->
+            <VBox>
+                <Separator orientation="VERTICAL" prefHeight="100" visible="false" />
+                <HBox>
+                    <Separator orientation="HORIZONTAL" prefWidth="100" visible="false" />
+                    <GridPane fx:id="dashboard">
+                        <children>
+                            <Button opacity="0.70" styleClass="home_font" text="Nouveau projet" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                            <Button opacity="0.70" styleClass="home_font" text="Ouvrir projet" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                            <Button opacity="0.70" styleClass="home_font" text="Poussé des terres" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                            <Button opacity="0.70" styleClass="home_font" text="Glissement" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                            <Button opacity="0.70" styleClass="home_font" text="Poiconnement" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                            <Button opacity="0.70" styleClass="home_font" text="Renversement" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                            <Button opacity="0.70" styleClass="home_font" text="Interne 1" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            <Button opacity="0.70" styleClass="home_font" text="Interne 2" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Button opacity="0.70" styleClass="home_font" text="A propos" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                            <Button opacity="0.70" styleClass="home_font" text="Aide" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                        </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+                    </GridPane>
+                </HBox>
+
+            </VBox>
+
+        </center>
+
+
+</BorderPane>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Separator prefWidth="30" visible="false"/>
+        <VBox>
+            <children>
+                <GridPane fx:id="donnees">
+                    <columnConstraints>
+                        <ColumnConstraints prefWidth="350"/>
+                        <ColumnConstraints prefWidth="400"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="35"/>
+                        <RowConstraints minHeight="35"/>
+                        <RowConstraints minHeight="35"/>
+                        <RowConstraints minHeight="35"/>
+                        <RowConstraints minHeight="35"/>
+                        <RowConstraints minHeight="35"/>
+                        <RowConstraints minHeight="35"/>
+                        <RowConstraints minHeight="35"/>
+                    </rowConstraints>
+                    <children>
+                        <Label text="Numéro d'affaire" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <Label text="Titre du projet" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <Label text="Lieu du projet" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <Label text="Date de l'étude" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <Label text="Maitre de l'ouvrage" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <Label text="Maitre de l'oeuvre" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <Label text="Client" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                        <Label text="Bureau d'étude" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <Label text="Commentaire" GridPane.rowIndex="8" GridPane.columnIndex="0"/>
+                        <TextField GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                        <TextField GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                        <TextField GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                        <TextField GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                        <TextField GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                        <TextField GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                        <TextField GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+                        <TextField GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+                        <TextArea GridPane.rowIndex="8" GridPane.columnIndex="1"/>
+
+                    </children>
+                </GridPane>
+                <HBox>
+                    <Button fx:id="passer" text="Passer aux vérifications" defaultButton="true"/>
+                    <Button fx:id="modifier" text="Modifier"/>
+                    <Button fx:id="annuler" text="Annuler" cancelButton="true"/>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</HBox>
