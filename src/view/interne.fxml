@@ -11,215 +11,200 @@
     </top>
     <left >
         <VBox>
-            <children>
-                <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
-                <Button fx:id="calculer" styleClass="command_button" defaultButton="true"  text="Calculer     ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/calculer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
+            <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
+            <Button fx:id="calculer" styleClass="command_button" defaultButton="true" text="Calculer     ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50" >
+                        <Image url="/images/icones/calculer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-                <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/effacer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/enregistrer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button styleClass="command_button" text="Imprimer   ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/imprimer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-            </children>
+            <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/effacer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/enregistrer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="imprimer" styleClass="command_button" text="Imprimer   ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/imprimer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
         </VBox>
     </left>
     <center>
         <HBox>
-            <children>
-                <Separator prefWidth="10" orientation="HORIZONTAL" visible="false"/>
+            <Separator prefWidth="10" visible="false"/>
 
-                <VBox maxWidth="450">
-                    <children>
-                        <Label styleClass="titre20" text="Résistance ultime à la traction" underline="true"/>
-                        <Label styleClass="titre18" text="Données" underline="true"/>
-                        <HBox>
-                            <children>
-                                <Separator prefWidth="170.0" orientation="HORIZONTAL" visible="false" />
-                                <Label styleClass="symbole" text="ρend"/>
-                            </children>
-                        </HBox>
-                        <Separator visible="false" minHeight="15" orientation="VERTICAL" />
-                        <GridPane fx:id="g1" gridLinesVisible="true">
-                            <columnConstraints>
-                                <ColumnConstraints />
-                                <ColumnConstraints minWidth="80" />
-                                <ColumnConstraints minWidth="100" />
-                                <ColumnConstraints minWidth="70" />
-                                <ColumnConstraints minWidth="80" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints />
-                                <RowConstraints />
-                            </rowConstraints>
-                            <children>
-                                <Label text="Condition de &#13;mise en oeuvre"  GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                                <Label text="peu sévère" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                                <Label text="moyennement &#13;sévère" wrapText="true" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                                <Label text="sévère" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-                                <Label text="très sévère" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-                                <Label text="Coeffient" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                <RadioButton text="0.87" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <RadioButton text="0.80" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                <RadioButton text="0.67" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                <RadioButton text="0.4" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                            </children>
-                        </GridPane>
+            <VBox maxWidth="450">
+                <Label styleClass="titre20" text="Résistance ultime à la traction"/>
+                <Label styleClass="titre18" text="Données"/>
+                <HBox>
+                    <Separator prefWidth="170.0" visible="false"/>
+                    <Label styleClass="symbole" text="ρend"/>
+                </HBox>
+                <Separator visible="false" minHeight="15" orientation="VERTICAL"/>
+                <GridPane fx:id="g1" gridLinesVisible="true">
+                    <columnConstraints>
+                        <ColumnConstraints/>
+                        <ColumnConstraints minWidth="80"/>
+                        <ColumnConstraints minWidth="100"/>
+                        <ColumnConstraints minWidth="70"/>
+                        <ColumnConstraints minWidth="80"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                    </rowConstraints>
+                    <Label text="Condition de &#13;mise en oeuvre" GridPane.columnIndex="0"
+                           GridPane.rowIndex="0"/>
+                    <Label text="peu sévère" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="moyennement &#13;sévère" wrapText="true" GridPane.columnIndex="2"
+                           GridPane.rowIndex="0"/>
+                    <Label text="sévère" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                    <Label text="très sévère" GridPane.columnIndex="4" GridPane.rowIndex="0"/>
+                    <Label text="Coeffient" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.87" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.80" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.67" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.4" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+                </GridPane>
 
-                        <Separator visible="false" minHeight="30.0" orientation="VERTICAL" />
-                        <HBox>
-                            <children>
-                                <Separator prefWidth="170.0" orientation="HORIZONTAL" visible="false" />
-                                <Label styleClass="symbole" text="ρflu"/>
-                            </children>
-                        </HBox>
-                        <Separator visible="false" minHeight="15" orientation="VERTICAL" />
-                        <GridPane fx:id="g2" gridLinesVisible="true">
-                            <columnConstraints>
-                                <ColumnConstraints minWidth="100" />
-                                <ColumnConstraints minWidth="70" />
-                                <ColumnConstraints minWidth="70" />
-                                <ColumnConstraints minWidth="70" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints />
-                                <RowConstraints />
-                            </rowConstraints>
-                            <children>
-                                <Label text="polymère" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                                <Label text="PET,PA" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                                <Label text="PEHD" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                                <Label text="PP" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-                                <Label text="Valeurs forfaitaires&#13;de ρflu" wrapText="true" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                <RadioButton text="0.33" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <RadioButton text="0.20" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                <RadioButton text="0.16" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                            </children>
-                        </GridPane>
+                <Separator visible="false" minHeight="30.0" orientation="VERTICAL"/>
+                <HBox>
+                    <Separator prefWidth="170.0" visible="false"/>
+                    <Label styleClass="symbole" text="ρflu"/>
+                </HBox>
+                <Separator visible="false" minHeight="15" orientation="VERTICAL"/>
+                <GridPane fx:id="g2" gridLinesVisible="true">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="100"/>
+                        <ColumnConstraints minWidth="70"/>
+                        <ColumnConstraints minWidth="70"/>
+                        <ColumnConstraints minWidth="70"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                    </rowConstraints>
+                    <Label text="polymère" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label text="PET,PA" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="PEHD" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <Label text="PP" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                    <Label text="Valeurs forfaitaires&#13;de ρflu" wrapText="true" GridPane.columnIndex="0"
+                           GridPane.rowIndex="1"/>
+                    <RadioButton text="0.33" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.20" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.16" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                </GridPane>
 
-                        <Separator visible="false" minHeight="30.0" orientation="VERTICAL" />
-                        <HBox>
-                            <children>
-                                <Separator prefWidth="170.0" orientation="HORIZONTAL" visible="false" />
-                                <Label styleClass="symbole" text="ρdeg"/>
-                            </children>
-                        </HBox>
-                        <Separator visible="false" minHeight="15" orientation="VERTICAL" />
-                        <GridPane fx:id="g3" gridLinesVisible="true">
-                            <columnConstraints>
-                                <ColumnConstraints minWidth="90" />
-                                <ColumnConstraints minWidth="100" />
-                                <ColumnConstraints minWidth="70" />
-                                <ColumnConstraints minWidth="70" />
-                                <ColumnConstraints minWidth="70" />
-                            </columnConstraints>
-                            <rowConstraints>
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                                <RowConstraints />
-                            </rowConstraints>
-                            <children>
-                                <Label text="ph" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                                <Label text="Classe de durée&#13; d'utilisation" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                                <Label text="PET" GridPane.columnIndex="2" GridPane.rowIndex="0" />
-                                <Label text="PEHD/PP" GridPane.columnIndex="3" GridPane.rowIndex="0" />
-                                <Label text="PA" GridPane.columnIndex="4" GridPane.rowIndex="0" />
-                                <Label text="4 - ph - 8" GridPane.columnIndex="0" GridPane.rowIndex="1" GridPane.rowSpan="2" />
-                                <Label text="8 - ph -9" GridPane.columnIndex="0" GridPane.rowIndex="3" GridPane.rowSpan="2" />
-                                <Label text="1 à 3" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                <Label text="4 ou 5" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                <Label text="1 à 3" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                <Label text="4 ou 5" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                <RadioButton text="0.95" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                                <RadioButton text="0.83" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                                <RadioButton text="0.90" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                                <RadioButton text="0.77" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                                <RadioButton text="0.95" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                                <RadioButton text="0.77" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                                <RadioButton text="0.95" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                                <RadioButton text="0.77" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                                <RadioButton text="0.90" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                                <RadioButton text="0.90" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                            </children>
-                        </GridPane>
+                <Separator visible="false" minHeight="30.0" orientation="VERTICAL"/>
+                <HBox>
+                    <Separator prefWidth="170.0" visible="false"/>
+                    <Label styleClass="symbole" text="ρdeg"/>
+                </HBox>
+                <Separator visible="false" minHeight="15" orientation="VERTICAL"/>
+                <GridPane fx:id="g3" gridLinesVisible="true">
+                    <columnConstraints>
+                        <ColumnConstraints minWidth="90"/>
+                        <ColumnConstraints minWidth="100"/>
+                        <ColumnConstraints minWidth="70"/>
+                        <ColumnConstraints minWidth="70"/>
+                        <ColumnConstraints minWidth="70"/>
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                        <RowConstraints/>
+                    </rowConstraints>
+                    <Label text="ph" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label text="Classe de durée&#13; d'utilisation" wrapText="true" GridPane.columnIndex="1"
+                           GridPane.rowIndex="0"/>
+                    <Label text="PET" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                    <Label text="PEHD/PP" GridPane.columnIndex="3" GridPane.rowIndex="0"/>
+                    <Label text="PA" GridPane.columnIndex="4" GridPane.rowIndex="0"/>
+                    <Label text="4 - ph - 8" GridPane.columnIndex="0" GridPane.rowIndex="1"
+                           GridPane.rowSpan="2"/>
+                    <Label text="8 - ph -9" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                           GridPane.rowSpan="2"/>
+                    <Label text="1 à 3" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                    <Label text="4 ou 5" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                    <Label text="1 à 3" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                    <Label text="4 ou 5" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                    <RadioButton text="0.95" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.83" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+                    <RadioButton text="0.90" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+                    <RadioButton text="0.77" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
+                    <RadioButton text="0.95" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.77" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+                    <RadioButton text="0.95" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+                    <RadioButton text="0.77" GridPane.columnIndex="3" GridPane.rowIndex="4"/>
+                    <RadioButton text="0.90" GridPane.columnIndex="4" GridPane.rowIndex="1"/>
+                    <RadioButton text="0.90" GridPane.columnIndex="4" GridPane.rowIndex="3"/>
+                </GridPane>
 
-                        <Separator orientation="VERTICAL" maxWidth="50" visible="false"/>
-                        <HBox>
-                            <children>
-                                <Label styleClass="symbole" fx:id="rtk_label" text="Rtk"/>
-                                <TextField fx:id="rtk" maxWidth="50" />
-                                <Label text="kn" />
-                            </children>
-                        </HBox>
-                    </children>
-                </VBox>
+                <Separator orientation="VERTICAL" maxWidth="50" visible="false"/>
+                <HBox>
+                    <Label styleClass="symbole" fx:id="rtk_label" text="Rtk"/>
+                    <TextField fx:id="rtk" maxWidth="50"/>
+                    <Label text="kn"/>
+                </HBox>
+            </VBox>
 
-                <VBox>
-                    <children>
-                        <Label styleClass="titre18" text="Résultat" underline="true"/>
-                        <HBox>
-                            <children>
-                                <Label styleClass="symbole" fx:id="rtd_label" text="Rt,d"/>
-                                <TextField fx:id="rtd" editable="false" maxWidth="50" />
-                                <Label text="kn" />
-                            </children>
-                        </HBox>
-                    </children>
-                </VBox>
+            <VBox>
+                <Label styleClass="titre20" text="RÉSULTAT:"/>
+                <HBox>
+                    <Label styleClass="symbole" fx:id="rtd_label" text="Rt,d"/>
+                    <TextField fx:id="rtd" editable="false" maxWidth="50"/>
+                    <Label text="kn"/>
+                </HBox>
+            </VBox>
 
-            </children>
         </HBox>
     </center>
 
     <right>
-        <VBox layoutX="800" minWidth="400.0">
-            <children>
+        <VBox maxWidth="470.0">
+            <ImageView fitHeight="250.0" fitWidth="470.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/images/schema.png"/>
+            </ImageView>
+            <TextArea fx:id="info" editable="false">hcosuhcd</TextArea>
 
-                <ImageView fitHeight="300.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
-                    <image><Image url="@/images/schema.png" /></image>
-                </ImageView>
-                <TextArea fx:id="info" maxHeight="100" editable="false">hcosuhcd</TextArea>
-
-            </children>
         </VBox>
     </right>
 
-
+    <bottom>
+        <VBox  >
+            <Separator prefWidth="500"/>
+            <ImageView fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/images/inter_form.png"/>
+            </ImageView>
+        </VBox>
+    </bottom>
 
 </BorderPane>
-

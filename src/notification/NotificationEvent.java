@@ -19,7 +19,6 @@ package notification;
 import javafx.event.Event;
 import javafx.event.EventTarget;
 import javafx.event.EventType;
-import notification.Notification;
 
 
 /**

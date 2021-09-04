@@ -11,112 +11,93 @@
         <HBox fx:id="mb"/>
     </top>
     <left >
-        <VBox >
-            <children>
-                <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
-                <Button fx:id="calculer" styleClass="command_button" defaultButton="true"  text="Calculer     ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/calculer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
+        <VBox>
+            <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
+            <Button fx:id="calculer" styleClass="command_button" defaultButton="true" text="Calculer     ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50" >
+                        <Image url="/images/icones/calculer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-                <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/effacer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/enregistrer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button styleClass="command_button" text="Imprimer   ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/imprimer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-            </children>
+            <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/effacer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/enregistrer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="imprimer" styleClass="command_button" text="Imprimer   ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/imprimer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
         </VBox>
     </left>
     <center>
-        <HBox >
-            <children>
-                <Separator prefWidth="10" orientation="HORIZONTAL" visible="false"/>
-                <VBox minWidth="400">
-                    <children>
-                        <Label styleClass="titre20" text="DONNÉES :"/>
-                        <HBox>
-                            <children>
-                                <Label text="Vk"/>
-                                <TextField disable="true" fx:id="vk" editable="false" maxWidth="80"/>
-                            </children>
-                        </HBox>
-                        <HBox>
-                            <children>
-                                <Label text="Pa"/>
-                                <TextField disable="true" fx:id="pa" editable="false" maxWidth="80"/>
-                            </children>
-                        </HBox>
-                        <Label styleClass="titre" text="Formules"/>
-                        <ImageView preserveRatio="true">
-                            <image><Image url="@/images/form_renversemment.png" /></image>
-                        </ImageView>
-                    </children>
-                </VBox>
-                <VBox>
-                    <children>
-                        <Label text="RESULTATS :" underline="true">
-                            <font>
-                                <Font name="System Bold" size="18.0" />
-                            </font>
-                        </Label>
-                        <HBox>
-                            <Label text="Fs=" />
-                            <TextField fx:id="fs" editable="false" maxWidth="80"/>
-                            <Label fx:id="res" text="" textFill="#a1170e">
-                                <font>
-                                    <Font name="System Bold" size="18.0" />
-                                </font>
-                            </Label>
-                        </HBox>
-                    </children>
-                </VBox>
-            </children>
+        <HBox>
+            <Separator prefWidth="10" visible="false"/>
+            <VBox minWidth="400">
+                <Label styleClass="titre20" text="Calcul de renversement :"/>
+                <Label styleClass="titre18" text="DONNÉES :"/>
+                <HBox>
+                    <Label text="Vk"/>
+                    <TextField disable="true" fx:id="vk" editable="false" maxWidth="80"/>
+                </HBox>
+                <HBox>
+                    <Label text="Pa"/>
+                    <TextField disable="true" fx:id="pa" editable="false" maxWidth="80"/>
+                </HBox>
+            </VBox>
+            <VBox>
+                <Label styleClass="titre20" text="RÉSULTATS :"/>
+                <HBox>
+                    <Label text="Fs="/>
+                    <TextField fx:id="fs" editable="false" maxWidth="80"/>
+                    <Label styleClass="titre18" fx:id="res" textFill="#a1170e"/>
+                </HBox>
+            </VBox>
         </HBox>
     </center>
 
     <right>
-        <VBox minWidth="450.0">
-            <children>
+        <VBox maxWidth="470.0">
+            <ImageView fitHeight="250.0" fitWidth="470.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@/images/renversement.png"/>
+            </ImageView>
+            <TextArea fx:id="info" editable="false">hcosuhcd</TextArea>
 
-                <ImageView fitHeight="300.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
-                    <image><Image url="@/images/renversement.png" /></image>
-                </ImageView>
-                <TextArea fx:id="info" editable="false">hcosuhcd</TextArea>
-
-            </children>
         </VBox>
     </right>
-
+    <bottom>
+        <VBox>
+            <Separator prefWidth="500" />
+            <ImageView preserveRatio="true">
+                <Image url="@/images/form_renversemment.png"/>
+            </ImageView>
+        </VBox>
+    </bottom>
 </BorderPane>
 

@@ -6,118 +6,106 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
-<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <top>
         <HBox fx:id="mb" />
     </top>
     <left >
-        <VBox >
-            <children>
-                <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
-                <Button fx:id="calculer" styleClass="command_button" defaultButton="true"  text="Calculer     ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/calculer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
+        <VBox>
+            <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
+            <Button fx:id="calculer" styleClass="command_button" defaultButton="true" text="Calculer     ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50" >
+                        <Image url="/images/icones/calculer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-                <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/effacer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/enregistrer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button styleClass="command_button" text="Imprimer   ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/imprimer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-            </children>
+            <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/effacer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/enregistrer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="imprimer" styleClass="command_button" text="Imprimer   ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/imprimer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
         </VBox>
     </left>
     <center>
-        <HBox  minWidth="500"  prefHeight="100.0">
-            <children>
-                <Separator orientation="HORIZONTAL" prefWidth="10"/>
-                <VBox  minWidth="505.0">
-                    <children>
-                        <HBox>
-                            <children>
-                                <Label styleClass="titre20" text="TYPE D'ESSAI :" underline="true"/>
-                                        <ComboBox fx:id="combo" prefWidth="150.0" promptText="choisir">
-                                            <items>
-                                                <FXCollections fx:factory="observableArrayList">
-                                                    <String fx:value="pressiomètre" />
-                                                    <String fx:value="penetromètre" />
-                                                    <String fx:value="cisaillemment" />
-                                                </FXCollections>
+        <HBox minWidth="500" prefHeight="100.0">
+            <Separator  prefWidth="10"/>
+            <VBox fx:id="issaiparent" minWidth="505.0">
+                <Label styleClass="titre20" text="Calcul du poiconnement"/>
+                <HBox>
+                    <Label styleClass="titre18" text="TYPE D'ESSAI :"/>
+                    <ComboBox fx:id="combo" prefWidth="150.0" promptText="choisir">
+                        <items>
+                            <FXCollections fx:factory="observableArrayList">
+                                <String fx:value="Pressiomètre"/>
+                                <String fx:value="Penetromètre"/>
+                                <String fx:value="Cisaillemment"/>
+                            </FXCollections>
+                        </items>
+                    </ComboBox>
+                </HBox>
+                <VBox/>
+            </VBox>
 
-                                            </items>
-                                        </ComboBox>
-                            </children>
-                        </HBox>
-                        <VBox fx:id="essai"/>
-                    </children>
-                </VBox>
+            <VBox minWidth="300">
+                <Label styleClass="titre20" text="RÉSULTATS :"/>
+                <GridPane>
+                    <Label styleClass="symbole" text="Vk" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label styleClass="symbole" text="qnet" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Label styleClass="symbole" text="Rv,d" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
 
-                <VBox minWidth="300">
-                    <children>
-                        <Label  styleClass="titre20" text="Resultat"/>
-                        <GridPane>
-                            <children>
-                                <Label styleClass="symbole" text="Vk" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-                                <Label styleClass="symbole" text="qnet" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-                                <Label styleClass="symbole" text="Rv,d" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                    <TextField fx:id="vk" GridPane.columnIndex="1" GridPane.rowIndex="0" disable="true"
+                               maxWidth="70"/>
+                    <TextField fx:id="qnet" GridPane.columnIndex="1" GridPane.rowIndex="1" editable="false"
+                               maxWidth="70"/>
+                    <TextField fx:id="rvd" GridPane.columnIndex="1" GridPane.rowIndex="2" editable="false"
+                               maxWidth="70"/>
 
-                                <TextField fx:id="vk" GridPane.columnIndex="1" GridPane.rowIndex="0" disable="true" maxWidth="70" />
-                                <TextField fx:id="qnet" GridPane.columnIndex="1" GridPane.rowIndex="1" editable="false" maxWidth="70" />
-                                <TextField fx:id="rvd" GridPane.columnIndex="1" GridPane.rowIndex="2" editable="false" maxWidth="70" />
+                    <Label text="kn/m²" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                    <Label text="kn/m²" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
 
-                                <Label text="kn/m²" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
-                                <Label text="kn/m²" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
-
-                            </children>
-                        </GridPane>
-                        <Label fx:id="res" styleClass="titre20" textFill="#a1170e"/>
-                    </children>
-                </VBox>
-            </children>
+                </GridPane>
+                <Label fx:id="res" styleClass="titre20" textFill="#a1170e"/>
+            </VBox>
         </HBox>
     </center>
     <right>
-        <VBox  maxWidth="400.0">
-            <children>
-                <ImageView fitHeight="300.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
-                    <image><Image url="@../images/poiconnement.png" /></image>
-                </ImageView>
-                <TextArea fx:id="info" editable="false" minHeight="100">hcosuhcd</TextArea>
-            </children>
+        <VBox maxWidth="400.0">
+            <ImageView fitHeight="250.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                <Image url="@../images/poiconnement.png"/>
+            </ImageView>
+            <TextArea fx:id="info" editable="false" minHeight="100">hcosuhcd</TextArea>
         </VBox>
     </right>
 
 
 </BorderPane>
-

@@ -1,10 +1,13 @@
 package controller;
 
 import Formules.Renversement;
+import javafx.event.EventHandler;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.paint.Color;
+import model.Imprimante;
 
 import static java.lang.Math.sin;
 
@@ -18,7 +21,7 @@ public class Crenversement extends Controller{
         }
         return instance;
     }
-    Button enregistrer;
+    Button enregistrer,imprimer;
     TextField fst;
     Label res;
     void calcul(){
@@ -49,8 +52,9 @@ public class Crenversement extends Controller{
     Crenversement(){
         super("renversement.fxml",4);
         enregistrer=(Button) scene.lookup("#enregistrer");
+        imprimer=(Button) scene.lookup("#imprimer");
         fst=(TextField)scene.lookup("#fs");
         res=(Label) scene.lookup("#res");
-
+        imprimer.setOnMouseClicked(mouseEvent -> Imprimante.getInstance().imprimer(root));
     }
 }

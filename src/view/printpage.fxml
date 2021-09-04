@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx">
+    <top>
+        <VBox>
+            <ImageView fitHeight="100" fitWidth="600">
+                <Image url="@/images/header.png"/>
+            </ImageView>
+        </VBox>
+
+    </top>
+    <bottom>
+        <ImageView fitHeight="100" fitWidth="600">
+            <Image url="@/images/footer.png"/>
+        </ImageView>
+    </bottom>
+
+</BorderPane>

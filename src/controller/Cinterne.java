@@ -1,10 +1,10 @@
 package controller;
 
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
+
 import javafx.scene.control.*;
 import javafx.scene.layout.GridPane;
 import Formules.interne;
+import model.Imprimante;
 import model.Projet;
 import org.w3c.dom.Element;
 
@@ -22,7 +22,7 @@ public class Cinterne extends Controller{
     ToggleGroup g1 = new ToggleGroup();
     ToggleGroup g2 = new ToggleGroup();
     ToggleGroup g3 = new ToggleGroup();
-    Button enregistrer;
+    Button enregistrer,imprimer;
     Cinterne(){
         super("interne.fxml",5);
 
@@ -74,59 +74,55 @@ public class Cinterne extends Controller{
         TextField rtd= (TextField) scene.lookup("#rtd");
         TextField rtk=(TextField) scene.lookup("#rtk");
         Button calculer=(Button) scene.lookup("#calculer");
+        imprimer=(Button) scene.lookup("#imprimer");
         enregistrer=(Button) scene.lookup("#enregistrer");
-        enregistrer.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                Element interne= (Element) Projet.getInstance().dom.getElementsByTagName("interne1").item(0);
-                RadioButton rb;
-                for(int i=0;i<4;i++){
-                    rb= (RadioButton) g1.getToggles().get(i);
+        enregistrer.setOnAction(actionEvent -> {
+            Element interne= (Element) Projet.getInstance().dom.getElementsByTagName("interne1").item(0);
+            RadioButton rb;
+            for(int i=0;i<4;i++){
+                rb= (RadioButton) g1.getToggles().get(i);
 
-                    if(rb.equals(g1.getSelectedToggle())){
-                        interne.setAttribute("g1",String.valueOf(i));
-                        break;
-                    }
+                if(rb.equals(g1.getSelectedToggle())){
+                    interne.setAttribute("g1",String.valueOf(i));
+                    break;
                 }
-                for(int i=0;i<3;i++){
-                    rb= (RadioButton) g2.getToggles().get(i);
-
-                    if(rb.equals(g2.getSelectedToggle())){
-                        interne.setAttribute("g2",String.valueOf(i));
-                        break;
-                    }
-                }
-                for(int i=0;i<11;i++){
-                    rb= (RadioButton) g3.getToggles().get(i);
-
-                    if(rb.equals(g3.getSelectedToggle())){
-                        interne.setAttribute("g3",String.valueOf(i));
-                        break;
-                    }
-                }
-                TextField rtk=(TextField) scene.lookup("#rtk");
-                interne.setAttribute("rtk",rtk.getText());
-                interne.setAttribute("rtd",rtd.getText());
-                Projet.getInstance().ecrire();
             }
-        });
-        calculer.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                RadioButton b;
-                b= (RadioButton) g1.getSelectedToggle();
-                Double pend=Double.parseDouble(b.getText());
-                b= (RadioButton) g2.getSelectedToggle();
-                Double pflu=Double.parseDouble(b.getText());
-                b= (RadioButton) g3.getSelectedToggle();
-                Double pdeg=Double.parseDouble(b.getText());
-                Double rtkv=Double.parseDouble(rtk.getText());
-                Double res=interne.calcul(pend,pflu,pdeg,rtkv);
-                rtd.setText(res.toString());
+            for(int i=0;i<3;i++){
+                rb= (RadioButton) g2.getToggles().get(i);
+
+                if(rb.equals(g2.getSelectedToggle())){
+                    interne.setAttribute("g2",String.valueOf(i));
+                    break;
+                }
             }
+            for(int i=0;i<11;i++){
+                rb= (RadioButton) g3.getToggles().get(i);
+
+                if(rb.equals(g3.getSelectedToggle())){
+                    interne.setAttribute("g3",String.valueOf(i));
+                    break;
+                }
+            }
+            TextField rtk1 =(TextField) scene.lookup("#rtk");
+            interne.setAttribute("rtk", rtk1.getText());
+            interne.setAttribute("rtd",rtd.getText());
+            Projet.getInstance().ecrire();
         });
+        calculer.setOnAction(actionEvent -> {
+            RadioButton b;
+            b= (RadioButton) g1.getSelectedToggle();
+            Double pend=Double.parseDouble(b.getText());
+            b= (RadioButton) g2.getSelectedToggle();
+            Double pflu=Double.parseDouble(b.getText());
+            b= (RadioButton) g3.getSelectedToggle();
+            Double pdeg=Double.parseDouble(b.getText());
+            Double rtkv=Double.parseDouble(rtk.getText());
+            Double res=interne.calcul(pend,pflu,pdeg,rtkv);
+            rtd.setText(res.toString());
+        });
+        imprimer.setOnMouseClicked(mouseEvent -> Imprimante.getInstance().imprimer(root));
     }
-    public void réinitialiser(){
+    public void reinitialiser(){
         Element interne= (Element) Projet.getInstance().dom.getElementsByTagName("interne1").item(0);
         if(interne.hasAttributes()){
             g1.selectToggle(g1.getToggles().get(Integer.parseInt(interne.getAttribute("g1"))));

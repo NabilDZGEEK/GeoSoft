@@ -1,19 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<BorderPane  minWidth="1000" minHeight="550" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" >
+<BorderPane style="-fx-background-color : #fff;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
     <top>
-        <HBox fx:id="mb"/>
+        <HBox fx:id="mb" />
     </top>
     <center>
-        <ImageView layoutY="100" layoutX="200" fitHeight="600.0" fitWidth="1000.0" >
-            <image><Image url="@../images/apropos.png" /></image>
-        </ImageView>
+
+
+
     </center>
+    <left >
+        <HBox>
+            <Separator  prefWidth="20" visible="false" />
+            <VBox prefWidth="500" styleClass="symbole">
+                <HBox>
+                    <Separator  prefWidth="200" visible="false" />
+                    <Label textFill="#293E4E" text="Geo">
+                        <font>
+                            <Font name="System Bold Italic" size="50.0" />
+                        </font>
+                    </Label>
+                    <Label textFill="EA7500" text="Soft" >
+                        <font>
+                            <Font name="System Bold Italic" size="50.0" />
+                        </font>
+                    </Label>
+                </HBox>
+                <Separator orientation="VERTICAL" prefHeight="50" visible="false" />
+                <Label text="Études de stabilité externe des murs de soutènement en massifs renforcées par géotextiles et parement Atalus" wrapText="true">
+                    <font>
+                        <Font name="System Bold" size="25.0" />
+                    </font>
+                </Label>
+                <Separator orientation="VERTICAL" prefHeight="30" visible="false" />
+                <Label styleClass="titre20" text="Logiciel établi par :"/>
 
+                <Text text="
+                AIT SAID Nabil&#13;
+                Tel: 0673803794"/>
+                <HBox>
+                    <Text text="
+                Email: " />
+                    <Text styleClass="link" text="nabil.aitsaid@yahoo.com" />
+                </HBox>
+                <Separator orientation="VERTICAL" prefHeight="20" visible="false"/>
+                <Text text="
+                NAIT CHABANE Mohand Ourabah&#13;
+                Tel: 0660406256"/>
+                <HBox>
 
+                    <Text text="
+                Email: " />
+                    <Text styleClass="link" text="betsagc@sagcalgerie.com" />
+                </HBox>
+                <Separator orientation="VERTICAL" prefHeight="130" visible="false"/>
+                <HBox>
+                    <Separator  prefWidth="200" visible="false"/>
+                    <Label styleClass="titre18" text=" GeoSoft V1.0 (Septembre 2021)"/>
+                </HBox>
+
+            </VBox>
+        </HBox>
+
+    </left>
+    <right>
+        <ImageView>
+            <Image url="@../images/logo.png"/>
+        </ImageView>
+    </right>
 
 </BorderPane>

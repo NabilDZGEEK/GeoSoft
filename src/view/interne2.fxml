@@ -12,221 +12,235 @@
     </top>
     <left >
         <VBox>
-            <children>
-                <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
-                <Button fx:id="calculer" styleClass="command_button" defaultButton="true"  text="Calculer     ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/calculer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
+            <Separator prefHeight="100" orientation="VERTICAL" visible="false"/>
+            <Button fx:id="calculer" styleClass="command_button" defaultButton="true" text="Calculer     ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50" >
+                        <Image url="/images/icones/calculer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
 
-                <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/effacer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/enregistrer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-                <Button styleClass="command_button" text="Imprimer   ">
-                    <font><Font size="15.0" /></font>
-                    <graphic >
-                        <ImageView fitWidth="50" fitHeight="50" preserveRatio="false">
-                            <image >
-                                <Image url="/images/icones/imprimer.png"/>
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Button>
-            </children>
+            <Button fx:id="effacer" styleClass="command_button" text="Effacer       ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/effacer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="enregistrer" styleClass="command_button" disable="true" text="Enregistrer">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/enregistrer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button fx:id="imprimer" styleClass="command_button" text="Imprimer   ">
+                <font>
+                    <Font size="15.0"/>
+                </font>
+                <graphic>
+                    <ImageView fitWidth="50" fitHeight="50">
+                        <Image url="/images/icones/imprimer.png"/>
+                    </ImageView>
+                </graphic>
+            </Button>
         </VBox>
     </left>
     <center>
-        <HBox >
-            <children>
-                <Separator visible="false" orientation="HORIZONTAL" prefWidth="10"/>
-                <VBox minWidth="250">
-                    <children>
-                        <Label styleClass="titre20" text="Résistance ultime de l'interaction" underline="true"/>
-                        <Label styleClass="titre18" text="Données" underline="true"/>
-                        <HBox>
-                            <children>
-                                <VBox>
-                                    <children>
-                                        <GridPane fx:id="données">
-                                            <columnConstraints>
-                                                <ColumnConstraints />
-                                                <ColumnConstraints maxWidth="70" />
-                                                <ColumnConstraints />
-                                            </columnConstraints>
-                                            <rowConstraints>
-                                                <RowConstraints />
-                                                <RowConstraints />
-                                                <RowConstraints />
-                                                <RowConstraints />
-                                                <RowConstraints />
-                                                <RowConstraints />
-                                                <RowConstraints />
-                                            </rowConstraints>
-                                            <children>
-                                                <Label styleClass="symbole" text="y3k" GridPane.columnIndex="0" GridPane.rowIndex="0" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="0" />
-                                                <Label text="kn/m²" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+        <HBox>
+            <Separator visible="false" prefWidth="10"/>
+            <VBox minWidth="250">
+                <Label styleClass="titre20" text="Résistance ultime de l'interaction"/>
+                <Label styleClass="titre18" text="Données"/>
+                <HBox>
+                    <VBox>
+                        <GridPane fx:id="données">
+                            <columnConstraints>
+                                <ColumnConstraints/>
+                                <ColumnConstraints maxWidth="70"/>
+                                <ColumnConstraints/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                            </rowConstraints>
+                            <Label styleClass="symbole" text="y3k" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="0"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                            <Label text="kn/m²" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
 
-                                                <Label styleClass="symbole" text="z" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                                <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                            <Label styleClass="symbole" text="z" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="1"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
 
-                                                <Label styleClass="symbole" text="N" GridPane.columnIndex="0" GridPane.rowIndex="2" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                                                <Label text="u" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                            <Label styleClass="symbole" text="N" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="2"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                            <Label text="u" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
 
-                                                <Label styleClass="symbole" text="b" GridPane.columnIndex="0" GridPane.rowIndex="3" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                                                <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                            <Label styleClass="symbole" text="b" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="3"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
 
-                                                <Label styleClass="symbole" text="Ls" GridPane.columnIndex="0" GridPane.rowIndex="4" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                                <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                            <Label styleClass="symbole" text="Ls" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="4"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                            <Label text="m" GridPane.columnIndex="2" GridPane.rowIndex="4"/>
 
-                                                <Label styleClass="symbole" text="φ3k" GridPane.columnIndex="0" GridPane.rowIndex="5" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                                                <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                            <Label styleClass="symbole" text="φ3k" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="5"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                            <Label text="°" GridPane.columnIndex="2" GridPane.rowIndex="5"/>
 
-                                                <Label styleClass="symbole" text="Cg" GridPane.columnIndex="0" GridPane.rowIndex="6" />
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                            </children>
-                                        </GridPane>
-                                    </children>
-                                </VBox>
-                                <Separator visible="false" orientation="HORIZONTAL" prefWidth="20"/>
-                                <VBox>
-                                    <children>
+                            <Label styleClass="symbole" text="Cg" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="6"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                        </GridPane>
+                    </VBox>
+                    <Separator visible="false" prefWidth="20"/>
+                    <VBox>
+                        <GridPane fx:id="table" gridLinesVisible="true" maxWidth="200">
+                            <columnConstraints>
+                                <ColumnConstraints/>
+                                <ColumnConstraints/>
+                                <ColumnConstraints/>
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                                <RowConstraints/>
+                            </rowConstraints>
+                            <Label styleClass="symbole" text="      Z" GridPane.columnIndex="0"
+                                   GridPane.rowIndex="0"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="6"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="7"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="8"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="9"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="10"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="11"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="12"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="13"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="14"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="15"/>
+                            <TextField GridPane.columnIndex="0" GridPane.rowIndex="16"/>
 
-                                        <GridPane fx:id="table" gridLinesVisible="true" maxWidth="200">
-                                            <columnConstraints>
-                                                <ColumnConstraints/>
-                                                <ColumnConstraints/>
-                                                <ColumnConstraints/>
-                                            </columnConstraints>
-                                            <rowConstraints>
-                                                <RowConstraints/><RowConstraints/><RowConstraints/><RowConstraints/><RowConstraints/>
-                                                <RowConstraints/><RowConstraints/><RowConstraints/><RowConstraints/><RowConstraints/>
-                                                <RowConstraints/>
-                                            </rowConstraints>
-                                            <children>
-                                                <Label styleClass="symbole" text="      Z" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="1"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="2"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="3"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="4"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="5"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="6"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="7"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="8"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="9"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="10"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="11"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="12"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="13"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="14"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="15"/>
-                                                <TextField GridPane.columnIndex="0" GridPane.rowIndex="16"/>
+                            <Label styleClass="symbole" text="      Ls" GridPane.columnIndex="1"
+                                   GridPane.rowIndex="0"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="9"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="10"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="11"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="12"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="13"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="14"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="15"/>
+                            <TextField GridPane.columnIndex="1" GridPane.rowIndex="16"/>
 
-                                                <Label styleClass="symbole" text="      Ls" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="2"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="3"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="4"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="5"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="6"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="7"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="8"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="9"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="10"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="11"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="12"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="13"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="14"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="15"/>
-                                                <TextField GridPane.columnIndex="1" GridPane.rowIndex="16"/>
+                            <Label styleClass="symbole" text="      Rd" GridPane.columnIndex="2"
+                                   GridPane.rowIndex="0"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="6" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="7" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="8" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="9" editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="10"
+                                       editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="11"
+                                       editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="12"
+                                       editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="13"
+                                       editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="14"
+                                       editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="15"
+                                       editable="false"/>
+                            <TextField GridPane.columnIndex="2" GridPane.rowIndex="16"
+                                       editable="false"/>
+                        </GridPane>
+                        <Button fx:id="calculer_table" text="calculer"/>
+                    </VBox>
 
-                                                <Label styleClass="symbole" text="      Rd" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="1" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="2" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="3" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="4" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="5" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="6" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="7" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="8" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="9" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="10" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="11" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="12" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="13" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="14" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="15" editable="false"/>
-                                                <TextField GridPane.columnIndex="2" GridPane.rowIndex="16" editable="false"/>
-                                            </children>
-                                        </GridPane>
-                                        <Button fx:id="calculer_table" text="calculer"/>
-                                    </children>
-                                </VBox>
+                </HBox>
+            </VBox>
+            <Separator visible="false" minWidth="20"/>
 
-                            </children>
-                        </HBox>
-                    </children>
-                </VBox>
-                <Separator visible="false" orientation="HORIZONTAL" minWidth="20"/>
-
-                <VBox>
-                    <children>
-                        <Label styleClass="titre18" text="Résultat" underline="true"/>
-                        <HBox>
-                            <children>
-                                <Label styleClass="symbole" text="Rf,d"/>
-                                <TextField styleClass="donnee" fx:id="rtd" editable="false"  />
-                            </children>
-                        </HBox>
-                    </children>
-                </VBox>
-            </children>
+            <VBox>
+                <Label styleClass="titre20" text="RÉSULTATS :"/>
+                <HBox>
+                    <Label styleClass="symbole" text="Rf,d"/>
+                    <TextField styleClass="donnee" fx:id="rtd" editable="false"/>
+                </HBox>
+            </VBox>
         </HBox>
     </center>
     <right>
-        <VBox maxWidth="400.0">
-            <children>
+        <VBox maxWidth="470.0">
+            <ImageView fitHeight="250.0" fitWidth="470">
+                <Image url="@/images/interne2.png"/>
+            </ImageView>
+            <TextArea fx:id="info" editable="false">hcosuhcd</TextArea>
 
-                <ImageView fitHeight="300.0" preserveRatio="true">
-                    <image><Image url="@/images/interne2.png" /></image>
-                </ImageView>
-                <TextArea fx:id="info" editable="false">hcosuhcd</TextArea>
-
-            </children>
         </VBox>
     </right>
     <bottom>
-        <ImageView fitHeight="200.0" preserveRatio="true">
-            <image><Image url="@/images/interne2_form.png" /></image>
-        </ImageView>
+        <VBox  prefHeight="360">
+            <Separator prefWidth="500"/>
+            <HBox>
+                <ImageView fitHeight="100.0" preserveRatio="true">
+                    <Image url="@/images/intern2_form1.png"/>
+                </ImageView>
+                <ImageView fitHeight="100.0" preserveRatio="true">
+                    <Image url="@/images/intern2_form2.png"/>
+                </ImageView>
+                <ImageView fitHeight="100.0" preserveRatio="true">
+                    <Image url="@/images/intern2_form3.png"/>
+                </ImageView>
+            </HBox>
+
+        </VBox>
+
     </bottom>
 
 </BorderPane>

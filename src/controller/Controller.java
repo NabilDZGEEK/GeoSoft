@@ -11,7 +11,7 @@ import java.text.NumberFormat;
 
 public class Controller {
 
-    Parent root;
+    public Parent root;
     public Scene scene;
     public NumberFormat formatter;
     Controller(String fichier,int numMenu){
